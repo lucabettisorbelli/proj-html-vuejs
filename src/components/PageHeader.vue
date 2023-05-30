@@ -1,5 +1,17 @@
 <script>
-
+export default {
+    props: ['menuItems'],
+    data() {
+        return {
+            isMenuOpen: false
+        }
+    },
+    methods: {
+        toggleMenu() {
+            this.isMenuOpen = !this.isMenuOpen;
+        }
+    }
+}
 </script>
 
 <template>
@@ -12,7 +24,13 @@
                     </div>
                     <div class="icons">
                         <span><font-awesome-icon icon="shopping-cart" /></span>
-                        <span><font-awesome-icon icon="bars" /></span>
+                        <span @click="toggleMenu"><font-awesome-icon icon="bars" /></span>
+                    </div>
+                    <!-- dropdown -->
+                    <div v-if="isMenuOpen" class="dropdownMenu">
+                        <ul>
+                            <li v-for="item in menuItems">{{ item }}</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="centralBox">
@@ -55,6 +73,7 @@
 
         .icons {
             color: white;
+            position: relative;
 
             span {
                 padding: 1rem;
@@ -66,9 +85,28 @@
             justify-content: space-between;
         }
 
+        .dropdownMenu {
+            color: white;
+            text-align: end;
+            position: absolute;
+            top: 90px;
+            right: 380px;
+            background-color: rgba(70, 70, 70, 0.3);
+            width: 150px;
+
+            ul {
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                list-style: none;
+            }
+        }
+
         .elementsText {
             color: white;
-            margin-top: 10rem;
+            margin-top: 15rem;
 
             .boxTitle h1 {
                 font-size: 5em;

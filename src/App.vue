@@ -8,13 +8,26 @@ export default {
   components: {
     PageHeader,
     PageMain,
-    PageFooter
+    PageFooter,
+  },
+  data() {
+    return {
+      menuItems: [
+        'Home',
+        'About Us',
+        'Services',
+        'Shop',
+        'Our Team',
+        'Blog',
+        'Contact Us'
+      ]
+    }
   }
 }
 </script>
 
 <template>
-  <PageHeader />
+  <PageHeader :menuItems="menuItems" />
   <PageMain />
   <PageFooter />
 </template>
