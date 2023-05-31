@@ -18,6 +18,7 @@ export default {
     <header>
         <div class="containerImage">
             <div class="containerBoxed">
+                <!-- navbar -->
                 <div class="navbar">
                     <div class="imgLogo">
                         <img src="../assets/avadabarbers-logo-x2-200x70.png" alt="">
@@ -33,6 +34,7 @@ export default {
                         </ul>
                     </div>
                 </div>
+                <!-- elementi testuali -->
                 <div class="centralBox">
                     <div class="elementsText">
                         <div class="boxTitle">
@@ -46,8 +48,28 @@ export default {
                             <button>LEARN MORE</button>
                         </div>
                     </div>
+                    <!-- immagine barbiere -->
                     <div class="boxImage"></div>
                 </div>
+            </div>
+        </div>
+        <!-- pro barbers -->
+        <div class="backgroundImage">
+            <div class="textPro">
+                <div class="awardBox">
+                    <h4>Award Winning</h4>
+                </div>
+                <div class="proBox">
+                    <h1>Pro Barbers</h1>
+                </div>
+                <div class="buttonBox">
+                    <button>MEET YOUR NEW BARBER</button>
+                </div>
+            </div>
+        </div>
+        <div class="backgroundTriangle">
+            <div class="color">
+                <img src="../assets/triangle.svg" alt="">
             </div>
         </div>
     </header>
@@ -58,6 +80,9 @@ export default {
 .containerImage {
     height: 970px;
     background-image: url(../assets/avadabarbers-homepage-hero-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 
     .containerBoxed {
         max-width: 1150px;
@@ -90,7 +115,7 @@ export default {
             text-align: end;
             position: absolute;
             top: 90px;
-            right: 380px;
+            right: 10%;
             background-color: rgba(70, 70, 70, 0.3);
             width: 150px;
 
@@ -101,12 +126,19 @@ export default {
                 align-items: center;
                 justify-content: space-around;
                 list-style: none;
+
+                li:hover {
+                    color: #be9359;
+                    cursor: pointer;
+                }
             }
         }
 
         .elementsText {
             color: white;
-            margin-top: 15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             .boxTitle h1 {
                 font-size: 5em;
@@ -114,8 +146,8 @@ export default {
             }
 
             .line {
-                width: 40%;
-                border: 1px solid orange;
+                width: 200px;
+                border: 1px solid #be9359;
             }
 
             .subtitle h4 {
@@ -125,8 +157,8 @@ export default {
 
             .button {
                 button {
-                    border: 1px solid orange;
-                    color: orange;
+                    border: 1px solid #be9359;
+                    color: #be9359;
                     padding: 10px 20px;
                     margin-top: 1.5rem;
                     background-color: transparent;
@@ -142,5 +174,60 @@ export default {
             background-repeat: no-repeat;
         }
     }
+}
+
+.backgroundImage {
+    background-image: url(../assets/avadabarbers-about-introbackground.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .textPro {
+        padding-bottom: 30px;
+        text-align: center;
+
+        .awardBox {
+            color: #be9359;
+            padding-top: 70px;
+        }
+
+        .proBox {
+            color: white;
+            padding-top: 20px;
+        }
+
+        .buttonBox {
+            padding: 20px;
+
+            button {
+                border: 1px solid #be9359;
+                color: #be9359;
+                padding: 10px 20px;
+                background-color: transparent;
+            }
+        }
+    }
+
+}
+
+.backgroundTriangle {
+    background-image: url(../assets/avadabarbers-about-introbackground.jpg);
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+    height: 100px;
+
+    .color {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
 }
 </style>
