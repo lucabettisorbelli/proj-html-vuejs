@@ -94,11 +94,12 @@ export default {
             align-items: center;
             padding-top: 1rem;
             padding-bottom: 1rem;
+            position: relative;
+
         }
 
         .icons {
             color: white;
-            position: relative;
 
             span {
                 padding: 1rem;
@@ -115,7 +116,7 @@ export default {
             text-align: end;
             position: absolute;
             top: 90px;
-            right: 10%;
+            right: 0;
             background-color: rgba(70, 70, 70, 0.3);
             width: 150px;
 
