@@ -19,6 +19,23 @@ export default {
                     img: 'small-image-3.jpg',
                     name: 'Mark Wilson',
                 }
+            ],
+            posters: [
+                {
+                    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsum qui illo harum ad praesentium error blanditiis exercitationem ea quasi dolor porro repudiandae esse ex dolorum',
+                    img: 'bg-color.jpg',
+                    title: 'Avada Barbers Now Open',
+                },
+                {
+                    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsum qui illo harum ad praesentium error blanditiis exercitationem ea quasi dolor porro repudiandae esse ex dolorum',
+                    img: 'bg-card-2.jpg',
+                    title: 'Choosing the Rigth Barber',
+                },
+                {
+                    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsum qui illo harum ad praesentium error blanditiis exercitationem ea quasi dolor porro repudiandae esse ex dolorum',
+                    img: 'bg-card-3.jpg',
+                    title: 'Quick Service Guide',
+                }
             ]
         }
     },
@@ -75,6 +92,30 @@ export default {
     <div class="containerMainBottom">
         <div class="backgroundImage">
             <img src="../assets/triangle.svg" alt="">
+        </div>
+        <div class="boxPosters">
+            <div class="containerText">
+                <div class="posterSubtitle">
+                    <h4>TALES FROM THE BARBER SHOP</h4>
+                </div>
+                <div class="posterBlog">
+                    <h1>Recent Blog Posts</h1>
+                </div>
+            </div>
+            <div class="containerCards">
+                <div v-for="poster in posters" class="poster">
+                    <div class="boxImage">
+                        <img :src="getImageUrl(poster.img)" alt="">
+                    </div>
+                    <span class="posterTitle">
+                        <h2>{{ poster.title }}</h2>
+                    </span>
+                    <span class="posterParagraph">{{ poster.paragraph }}</span>
+                </div>
+            </div>
+            <div class="posterButton">
+                <button>READ MORE FOR OUR BLOG</button>
+            </div>
         </div>
     </div>
 </template>
@@ -205,6 +246,72 @@ export default {
             width: 100%;
             height: 100%;
             transform: scale(-1);
+        }
+    }
+}
+
+.boxPosters {
+    max-width: 1150px;
+    margin: 0 auto;
+    height: 870px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .containerText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .posterSubtitle {
+            color: #be9359;
+            padding-bottom: 10px;
+        }
+
+        .posterBlog {
+            color: #b0b0b0;
+        }
+    }
+
+    .containerCards {
+        display: flex;
+
+        .poster {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 30px;
+
+            .boxImage {
+                width: 360px;
+                height: 225px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .posterTitle {
+                color: #be9359;
+            }
+
+            .posterParagraph {
+                color: #b0b0b0;
+                text-align: center;
+            }
+        }
+    }
+
+    .posterButton {
+        button {
+            border: 1px solid #be9359;
+            color: #be9359;
+            padding: 10px 20px;
+            background-color: transparent;
         }
     }
 }
