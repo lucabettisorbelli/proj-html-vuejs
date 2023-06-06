@@ -127,7 +127,7 @@ export default {
     margin: 0 auto;
     margin-top: 50px;
     display: flex;
-    border-top: 1px solid #be9359;
+    border-top: 1px solid #006D77;
 
     .cardImage {
         background-image: url(../assets/bg-color.jpg);
@@ -154,7 +154,7 @@ export default {
         background-color: black;
 
         .subtitle {
-            color: #be9359;
+            color: #006D77;
         }
 
         .title {
@@ -167,10 +167,15 @@ export default {
 
         .button {
             button {
-                border: 1px solid #be9359;
-                color: #be9359;
+                border: 1px solid #006D77;
+                color: #006D77;
                 padding: 10px 20px;
                 background-color: transparent;
+
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -192,7 +197,7 @@ export default {
         align-items: center;
 
         .subtitle {
-            color: #be9359;
+            color: #006D77;
             padding-bottom: 10px;
         }
 
@@ -229,7 +234,7 @@ export default {
             }
 
             .name {
-                color: #be9359;
+                color: #006D77;
             }
         }
     }
@@ -265,7 +270,7 @@ export default {
         align-items: center;
 
         .posterSubtitle {
-            color: #be9359;
+            color: #006D77;
             padding-bottom: 10px;
         }
 
@@ -296,7 +301,7 @@ export default {
             }
 
             .posterTitle {
-                color: #be9359;
+                color: #006D77;
             }
 
             .posterParagraph {
@@ -308,10 +313,15 @@ export default {
 
     .posterButton {
         button {
-            border: 1px solid #be9359;
-            color: #be9359;
+            border: 1px solid #006D77;
+            color: #006D77;
             padding: 10px 20px;
             background-color: transparent;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
         }
     }
 }

@@ -80,10 +80,15 @@
                 align-items: center;
 
                 button {
-                    border: 1px solid #be9359;
-                    color: #be9359;
+                    border: 1px solid #006D77;
+                    color: #006D77;
                     padding: 10px 20px;
                     background-color: transparent;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -101,7 +106,7 @@
 
             #info {
                 height: 40%;
-                color: #f5f5f5;
+                color: #b0b0b0;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -113,12 +118,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: #be9359;
+                color: #006D77;
             }
 
             #social {
                 height: 20%;
-                color: white;
+                color: #b0b0b0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -149,10 +154,15 @@
                 align-items: center;
 
                 button {
-                    border: 1px solid #be9359;
-                    color: #be9359;
+                    border: 1px solid #006D77;
+                    color: #006D77;
                     padding: 10px 20px;
                     background-color: transparent;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                    }
                 }
             }
         }

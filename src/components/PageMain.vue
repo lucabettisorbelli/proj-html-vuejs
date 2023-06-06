@@ -24,6 +24,28 @@ export default {
                     title: 'Beard Tidy',
                     subscription: 'Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers.'
                 }
+            ],
+            cards: [
+                {
+                    src: 'brush.png',
+                    name: 'Brush',
+                    price: '$ 15.00',
+                },
+                {
+                    src: 'scissors.png',
+                    name: 'Scissors',
+                    price: '$ 85.00',
+                },
+                {
+                    src: 'hot-oil.png',
+                    name: 'Hot oil',
+                    price: '$ 15.00',
+                },
+                {
+                    src: 'razor.png',
+                    name: 'Straigth Razor',
+                    price: '$ 30.00',
+                },
             ]
         }
     },
@@ -71,20 +93,21 @@ export default {
                 <div class="backgroundColor">
                     <div class="containerboxedLarge">
                         <div class="subtitleBottom">
-                            <h3>WE HAVE YOU COVERED</h3>
+                            <h4>WE HAVE YOU COVERED</h4>
                         </div>
                         <div class="titleBottom">
                             <h1>Avada Gromming Products</h1>
                         </div>
                         <div class="elementsBarbers">
-                            <div class="element" v-for="element in images">
-                                <div class="images">
-                                    <img :src="getImageUrl(element.src)" alt="">
+                            <div class="cardsElement" v-for="card in cards">
+                                <div class="cards">
+                                    <img :src="getImageUrl(card.src)" alt="">
                                 </div>
-                                <div class="elementTitle">{{ element.title }}</div>
+                                <div class="elementTitle">{{ card.name }}</div>
+                                <div class="price">{{ card.price }}</div>
                             </div>
                         </div>
-                        <div class="button">
+                        <div class="buttonBox">
                             <button>SHOP OUR PRODUCT RANGE</button>
                         </div>
                     </div>
@@ -116,7 +139,7 @@ export default {
         align-items: center;
 
         .subtitle {
-            color: #be9359;
+            color: #006D77;
         }
 
         .title {
@@ -151,7 +174,7 @@ export default {
         }
 
         .elementTitle {
-            color: #be9359;
+            color: #006D77;
         }
 
         .elementSubtitle {
@@ -162,12 +185,18 @@ export default {
 }
 
 .button {
+    padding-top: 20px;
 
     button {
-        border: 1px solid #be9359;
-        color: #be9359;
+        border: 1px solid #006D77;
+        color: #006D77;
         padding: 10px 20px;
         background-color: transparent;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
     }
 }
 
@@ -200,15 +229,31 @@ export default {
         height: 100%;
         max-width: 1520px;
         margin: 0 auto;
-        color: orange;
+        color: #006D77;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+
+        .buttonBox {
+            margin-top: 150px;
+
+            button {
+                border: 1px solid #006D77;
+                color: #006D77;
+                padding: 10px 20px;
+                background-color: transparent;
+
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     .titleBottom {
         color: white;
+        padding-top: 10px;
     }
 
 }
@@ -216,16 +261,16 @@ export default {
 .elementsBarbers {
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 300px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 150px;
 
     .elementTitle {
-        color: #be9359;
+        color: #006D77;
     }
 
-    .element {
+    .cardsElement {
         width: 200px;
         display: flex;
         flex-direction: column;
@@ -233,16 +278,18 @@ export default {
         align-items: center;
     }
 
-    .images {
-        width: 80px;
-        height: 120px;
+    .cards {
+        width: 100%;
+        height: 200px;
 
         img {
             width: 100%;
             height: 100%;
-            filter: invert(100%);
         }
+
     }
+
+
 
 }
 </style>

@@ -21,7 +21,7 @@ export default {
                 <!-- navbar -->
                 <div class="navbar">
                     <div class="imgLogo">
-                        <img src="../assets/avadabarbers-logo-x2-200x70.png" alt="">
+                        <img src="../assets/avadabarbers-logo.png" alt="">
                     </div>
                     <div class="icons">
                         <span><font-awesome-icon icon="shopping-cart" /></span>
@@ -96,6 +96,16 @@ export default {
             padding-bottom: 1rem;
             position: relative;
 
+            .imgLogo {
+                width: 150px;
+                height: 50px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
         }
 
         .icons {
@@ -129,7 +139,7 @@ export default {
                 list-style: none;
 
                 li:hover {
-                    color: #be9359;
+                    color: #006D77;
                     cursor: pointer;
                 }
             }
@@ -148,7 +158,7 @@ export default {
 
             .line {
                 width: 200px;
-                border: 1px solid #be9359;
+                border: 1px solid #006D77;
             }
 
             .subtitle h4 {
@@ -158,11 +168,16 @@ export default {
 
             .button {
                 button {
-                    border: 1px solid #be9359;
-                    color: #be9359;
+                    border: 1px solid #006D77;
+                    color: #006D77;
                     padding: 10px 20px;
                     margin-top: 1.5rem;
                     background-color: transparent;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -189,7 +204,7 @@ export default {
         text-align: center;
 
         .awardBox {
-            color: #be9359;
+            color: #006D77;
             padding-top: 70px;
         }
 
@@ -202,10 +217,15 @@ export default {
             padding: 20px;
 
             button {
-                border: 1px solid #be9359;
-                color: #be9359;
+                border: 1px solid #006D77;
+                color: #006D77;
                 padding: 10px 20px;
                 background-color: transparent;
+
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
             }
         }
     }
